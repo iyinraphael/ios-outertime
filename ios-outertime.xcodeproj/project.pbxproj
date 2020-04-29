@@ -26,6 +26,7 @@
 		EBA50F0B24592682005D6C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA50F1424592727005D6C4F /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCircuitsViewController.swift; sourceTree = "<group>"; };
 		EBA50F162459273F005D6C4F /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		EBA50F1824592993005D6C4F /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA50EFC2459267A005D6C4F /* ios-outertime */,
+				EBA50F1824592993005D6C4F /* digital-7.ttf */,
 				EBA50EFB2459267A005D6C4F /* Products */,
 			);
 			sourceTree = "<group>";

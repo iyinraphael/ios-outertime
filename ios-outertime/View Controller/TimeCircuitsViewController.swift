@@ -11,4 +11,15 @@ import UIKit
 
 class TimeCircuitViewController: UIViewController {
     
+    @IBOutlet weak var destTimeLabel: UILabel!
+    @IBOutlet weak var presTimeLabel: UILabel!
+    @IBOutlet weak var speedLabvel: UILabel!
+    @IBOutlet weak var lastTimeDepLabel: UILabel!
+    
+    @IBAction func setDestinationButton(_ sender: Any) {
+    }
+    
+    @IBAction func travelBackButton(_ sender: Any) {
+    }
+    
 }
