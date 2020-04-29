@@ -104,7 +104,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="SET DESTINATION TIME"/>
                                                 <connections>
-                                                    <action selector="setDestinationButton:" destination="BmV-C7-Ev3" eventType="touchUpInside" id="BQC-hi-Dxs"/>
+                                                    <segue destination="aSl-5h-mJY" kind="presentation" id="cwe-S5-7sZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-fj-ovl">
@@ -164,11 +164,42 @@
             <objects>
                 <viewController id="aSl-5h-mJY" customClass="DatePickerViewController" customModule="ios_outertime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDK-SE-aIy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bkE-HC-tbA">
+                                <rect key="frame" x="47" y="271.66666666666669" width="320" height="216"/>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Xg-2A-zye">
+                                <rect key="frame" x="0.0" y="798" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="OcD-xb-JqD">
+                                        <connections>
+                                            <action selector="cancelButton:" destination="aSl-5h-mJY" id="l4H-2F-ZZv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="i4c-ea-4P4"/>
+                                    <barButtonItem systemItem="done" id="iaM-Je-Rtg">
+                                        <connections>
+                                            <action selector="doneButton:" destination="aSl-5h-mJY" id="KXU-NI-TWd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bkE-HC-tbA" firstAttribute="centerX" secondItem="pTN-hE-otQ" secondAttribute="centerX" id="0cg-Yu-NEu"/>
+                            <constraint firstItem="bkE-HC-tbA" firstAttribute="centerY" secondItem="pTN-hE-otQ" secondAttribute="centerY" id="htn-ay-0Tx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pTN-hE-otQ"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="bkE-HC-tbA" id="vtW-Xb-Gtr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQ2-yU-dCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

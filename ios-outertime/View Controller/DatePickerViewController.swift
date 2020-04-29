@@ -12,4 +12,12 @@ import UIKit
 class DatePickerViewController: UIViewController {
     
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func doneButton(_ sender: Any) {
+    }
 }
