@@ -21,10 +21,11 @@ class TimeCircuitViewController: UIViewController {
     @IBOutlet weak var speedLabvel: UILabel!
     @IBOutlet weak var lastTimeDepLabel: UILabel!
     
-    @IBAction func setDestinationButton(_ sender: Any) {
-    }
+    var currentSpeed = 0.0
+    
     
     @IBAction func travelBackButton(_ sender: Any) {
+        startTimer()
     }
     
     var dateFormater: DateFormatter {
@@ -38,5 +39,30 @@ class TimeCircuitViewController: UIViewController {
     func updateView() {
         let date = Date()
         presTimeLabel.text = dateFormater.string(from: date ).localizedUppercase
+        speedLabvel.text = "\(currentSpeed) MPH"
+        lastTimeDepLabel.text = "--- -- ----"
     }
+    
+    func startTimer() {
+        let timer = TimeInterval().advanced(by: 0.1)
+        currentSpeed += timer
+    }
+}
+
+
+extension TimeCircuitViewController: DatePickerDelegate {
+    
+    func destinationDateWasChosen(_ date: Date) {
+        destTimeLabel.text = dateFormater.string(from: date)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ModalDestinationDatePickerSegue" {
+            guard let destVC = segue.destination as? DatePickerViewController else {return}
+            destVC.delegate = self
+            
+        }
+    }
+    
 }

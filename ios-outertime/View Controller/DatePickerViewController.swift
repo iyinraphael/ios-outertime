@@ -9,8 +9,14 @@
 import Foundation
 import UIKit
 
+protocol DatePickerDelegate {
+    
+    func destinationDateWasChosen(_ date: Date)
+}
+
 class DatePickerViewController: UIViewController {
     
+    var delegate: DatePickerDelegate?
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -19,5 +25,6 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
+        delegate?.destinationDateWasChosen(datePicker.date)
     }
 }
