@@ -44,8 +44,24 @@ class TimeCircuitViewController: UIViewController {
     }
     
     func startTimer() {
-        let timer = TimeInterval().advanced(by: 0.1)
-        currentSpeed += timer
+        let timer = Timer(timeInterval: 0.1, target: self, selector: #selector(updateSpeed), userInfo: nil, repeats: false)
+        timer.fire()
+    
+    }
+    
+    @objc func updateSpeed() {
+        for _ in 1...88 {
+            
+        }
+        if currentSpeed != 88 {
+           currentSpeed += 1
+            speedLabvel.text = "\(currentSpeed) MPH"
+        } else {
+            let date = Date()
+            lastTimeDepLabel.text = dateFormater.string(from: date).localizedUppercase
+            presTimeLabel.text = destTimeLabel.text
+            currentSpeed = 0.0
+        }
     }
 }
 
