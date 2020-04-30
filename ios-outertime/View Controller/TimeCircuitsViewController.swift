@@ -11,6 +11,11 @@ import UIKit
 
 class TimeCircuitViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateView()
+    }
+    
     @IBOutlet weak var destTimeLabel: UILabel!
     @IBOutlet weak var presTimeLabel: UILabel!
     @IBOutlet weak var speedLabvel: UILabel!
@@ -22,4 +27,16 @@ class TimeCircuitViewController: UIViewController {
     @IBAction func travelBackButton(_ sender: Any) {
     }
     
+    var dateFormater: DateFormatter {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "MMM d, yyyy"
+        dateFormat.timeZone = .current
+        
+        return dateFormat
+    }
+    
+    func updateView() {
+        let date = Date()
+        presTimeLabel.text = dateFormater.string(from: date ).localizedUppercase
+    }
 }

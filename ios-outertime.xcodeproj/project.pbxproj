@@ -17,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB2A865D245A4C120060EACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/digital-7.ttf"; sourceTree = "<group>"; };
+		EB2A865F245A4C2B0060EACF /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/digital-7.ttf"; sourceTree = "<group>"; };
 		EBA50EFA2459267A005D6C4F /* ios-outertime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-outertime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA50EFD2459267A005D6C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA50EFF2459267A005D6C4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +28,6 @@
 		EBA50F0B24592682005D6C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA50F1424592727005D6C4F /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCircuitsViewController.swift; sourceTree = "<group>"; };
 		EBA50F162459273F005D6C4F /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
-		EBA50F1824592993005D6C4F /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA50EFC2459267A005D6C4F /* ios-outertime */,
-				EBA50F1824592993005D6C4F /* digital-7.ttf */,
+				EB2A865E245A4C120060EACF /* digital-7.ttf */,
 				EBA50EFB2459267A005D6C4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -177,6 +178,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EB2A865E245A4C120060EACF /* digital-7.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB2A865D245A4C120060EACF /* Base */,
+				EB2A865F245A4C2B0060EACF /* en */,
+			);
+			name = "digital-7.ttf";
+			sourceTree = "<group>";
+		};
 		EBA50F032459267A005D6C4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
